@@ -1,9 +1,19 @@
 const router = require("express").Router();
 const multer = require("multer");
-const upload = multer({ dest: "uploads/" });
+
+// FIX: Vercel-safe multer
+const storage = multer.memoryStorage();
+const upload = multer({ storage });
+
 const auth = require("../middleware/authMiddleware");
 const role = require("../middleware/roleMiddleware");
-const { uploadFile, getAllFiles, getSingleFile, getFileSummary, generateQuiz } = require("../controllers/fileController");
+const { 
+  uploadFile, 
+  getAllFiles, 
+  getSingleFile, 
+  getFileSummary, 
+  generateQuiz 
+} = require("../controllers/fileController");
 const User = require("../models/User");
 
 router.get("/", getAllFiles);
