@@ -11,12 +11,19 @@ const aiRoutes = require("./routes/aiRoutes");
 const app = express();
 app.use(express.json());
 app.use(cors());
+
+// Connect MongoDB
 connectDB();
 
-// Routes
+// Test root route (IMPORTANT)
+app.get("/", (req, res) => {
+  res.send("Backend is running successfully 🚀");
+});
+
+// API Routes
 app.use("/auth", authRoutes);
 app.use("/files", fileRoutes);
 app.use("/ai", aiRoutes);
 
-// Start Server
+// Export for Vercel Serverless
 module.exports = app;
