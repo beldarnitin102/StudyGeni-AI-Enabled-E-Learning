@@ -6,9 +6,13 @@ StudyGeni is a web-based e-learning platform enhanced with AI features. It lets 
 🌐 Live Demo
 
 You can view the deployed version here: https://study-geni-ai-enabled-e-learning-b2.vercel.app/
+
 for View of files https://study-geni-ai-enabled-e-learning-b2.vercel.app/files
+
 for acces by id https://study-geni-ai-enabled-e-learning-b2.vercel.app/files/69296ff7a0b3380a08f5d4df
+
 For summary https://study-geni-ai-enabled-e-learning-b2.vercel.app/files/69296ff7a0b3380a08f5d4df/summary 
+
 for quiz https://study-geni-ai-enabled-e-learning-b2.vercel.app/files/69296ff7a0b3380a08f5d4df/quiz
 
 To inspect the sample/test files you’ve created during development, visit the /files route:
